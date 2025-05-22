@@ -1,0 +1,260 @@
+Олег, [22.05.2025 10:28]
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсы успеха - Стань счастливым и богатым!</title>
+    <style>
+        :root {
+            --primary: #6c63ff;
+            --secondary: #4d44db;
+            --accent: #ff6584;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #28a745;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7ff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: #f5f7ff;
+            transform: skewY(-3deg);
+            z-index: 1;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .timer-container {
+            background-color: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            padding: 20px;
+            display: inline-block;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .timer {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .timer span {
+            background-color: rgba(0,0,0,0.2);
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 101, 132, 0.4);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 101, 132, 0.6);
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .benefit-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .benefit-card h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+        
+        .bonus-badge {
+            display: inline-block;
+          
+background-color: var(--success);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Наши курсы — ваш билет к успеху!</h1>
+            <p class="tagline">Станьте счастливее, богаче и увереннее в себе всего за несколько недель!</p>
+            
+            <div class="timer-container">
+                <p>Предложение закончится через:</p>
+                <div class="timer" id="countdown">
+                    <span id="hours">10</span>
+                    <span id="minutes">00</span>
+                    <span id="seconds">00</span>
+                </div>
+            </div>
+            
+            <a href="#signup" class="cta-button">Записаться сейчас</a>
+        </div>
+    </header>
+    
+    <section class="container">
+        <h2 style="text-align: center; color: var(--secondary);">Почему стоит выбрать нас?</h2>
+        
+        <div class="benefits">
+            <div class="benefit-card">
+                <h3>Практические знания</h3>
+                <p>Только то, что действительно работает в реальной жизни. Никакой воды — чистая практика и проверенные методики.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <h3>Поддержка экспертов</h3>
+                <p>Наши кураторы будут с вами на каждом этапе обучения. Ответят на вопросы и помогут преодолеть трудности.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="bonus-badge">Бонус</div>
+                <h3>Быстрый результат</h3>
+                <p>Первые положительные изменения вы заметите уже через неделю! Мы гарантируем прогресс при выполнении всех рекомендаций.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="signup" style="background-color: var(--light); text-align: center; padding: 60px 20px;">
+        <div class="container">
+            <h2 style="color: var(--primary);">Успейте записаться по специальной цене!</h2>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px;">
+                После окончания таймера стоимость курса увеличится в 2 раза. Не упустите свой шанс изменить жизнь к лучшему!
+            </p>
+            
+            <div style="margin-bottom: 30px;">
+                <span class="bonus-badge">Эксклюзивно</span>
+                <p style="font-weight: bold;">Для первых 20 участников: личная консультация + чек-лист в подарок!</p>
+            </div>
+            
+            <a href="#" class="cta-button">Начать обучение сейчас</a>
+            
+            <p style="margin-top: 30px; font-style: italic;">Счастливые выпускники уже добились своих целей — теперь ваша очередь!</p>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>© 2023 Курсы Успеха. Все права защищены.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Таймер обратного отсчета (10 часов)
+        function updateCountdown() {
+            const now = new Date();
+            const endTime = new Date(now.getTime() + 10 * 60 * 60 * 1000); // 10 часов от текущего времени
+            
+            const total = endTime - now;
+            const hours = Math.floor((total / (1000 * 60 * 60)) % 24;
+            const minutes = Math.floor((total / 1000 / 60)) % 60;
+
+const seconds = Math.floor((total / 1000)) % 60;
+            
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
